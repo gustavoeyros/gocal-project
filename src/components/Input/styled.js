@@ -10,7 +10,5 @@ export const InputStyle = styled.input`
   border-radius: 8px;
   margin-bottom: 10px;
   margin-top: 20px;
-  &::placeholder {
-    padding: 20px;
-  }
+  padding: 20px;
 `;
