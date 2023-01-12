@@ -10,7 +10,7 @@ const Home = () => {
         <Description>
           <p>Para começar</p> como podemos te chamar?
         </Description>
-        <Input placeholder="Digite o seu nome" />
+        <Input position="unique" placeholder="Digite o seu nome" />
         <Button>Avançar</Button>
       </Form>
     </GlobalWrapper>

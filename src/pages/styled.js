@@ -9,9 +9,13 @@ export const GlobalWrapper = styled.div`
 
   padding: 70px 20px 0;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 767px) {
     justify-content: center;
     align-items: center;
+
+    & div {
+      width: 275px;
+    }
   }
 `;
 
