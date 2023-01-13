@@ -1,4 +1,5 @@
 import { CheckWrapper, InputCheck } from "./styled";
+
 const Check = () => {
   return (
     <CheckWrapper>

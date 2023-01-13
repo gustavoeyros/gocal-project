@@ -1,9 +1,15 @@
 import { InputStyle, Select } from "./styled";
-const Input = ({ position, placeholder, type }) => {
+const Input = ({ position, placeholder, type, enteredRef, hasError }) => {
   return (
     <>
       {type !== "select" && (
-        <InputStyle position={position} type={type} placeholder={placeholder} />
+        <InputStyle
+          position={position}
+          ref={enteredRef}
+          type={type}
+          placeholder={placeholder}
+          hasError={hasError}
+        />
       )}
       {type === "select" && (
         <Select position={position} type={type}>

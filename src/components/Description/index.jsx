@@ -1,8 +1,8 @@
 import { Title } from "./styled";
-const Description = ({ children }) => {
+const Description = ({ children, position }) => {
   return (
     <>
-      <Title>{children}</Title>
+      <Title position={position}>{children}</Title>
     </>
   );
 };

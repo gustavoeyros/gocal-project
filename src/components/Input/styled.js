@@ -20,6 +20,8 @@ export const InputStyle = styled.input`
 
   ${(props) =>
     props.position === "unique" ? "margin-bottom: 10px; margin-top:20px;" : ""}
+
+    ${(props) => (props.hasError === false ? "border: 1px solid red" : "")}
 `;
 
 export const Select = styled.select`
