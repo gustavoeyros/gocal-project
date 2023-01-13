@@ -11,7 +11,7 @@ const Home = () => {
           <p>Para começar</p> como podemos te chamar?
         </Description>
         <Input position="unique" placeholder="Digite o seu nome" />
-        <Button>Avançar</Button>
+        <Button nav="/settings">Avançar</Button>
       </Form>
     </GlobalWrapper>
   );

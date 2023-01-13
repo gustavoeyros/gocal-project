@@ -36,7 +36,7 @@ const Result = () => {
         1638 calorias.
       </ResultText>
       <Check />
-      <Button>Reiniciar</Button>
+      <Button nav="/home">Reiniciar</Button>
     </GlobalWrapper>
   );
 };

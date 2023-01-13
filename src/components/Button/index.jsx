@@ -1,9 +1,11 @@
 import { ButtonStyle } from "./styled";
-
-const Button = ({ children, styledBack }) => {
+import { Link } from "react-router-dom";
+const Button = ({ children, styledBack, nav }) => {
   return (
     <>
-      <ButtonStyle styledBack={styledBack}>{children}</ButtonStyle>
+      <Link to={nav}>
+        <ButtonStyle styledBack={styledBack}>{children}</ButtonStyle>
+      </Link>
     </>
   );
 };

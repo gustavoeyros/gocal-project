@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import { GlobalWrapper } from "./styled";
 import Title from "../components/Title";
 import Description from "../components/Description";
@@ -23,8 +24,10 @@ const Settings = () => {
             placeholder="Seu nível de atividade física"
             type="select"
           />
-          <Button>Calcular</Button>
-          <Button styledBack="back">Voltar</Button>
+          <Button nav="/result">Calcular</Button>
+          <Button styledBack="back" nav="/home">
+            Voltar
+          </Button>
         </Form>
       </div>
     </GlobalWrapper>
