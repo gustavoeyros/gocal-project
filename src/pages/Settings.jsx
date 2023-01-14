@@ -6,6 +6,7 @@ import { Form, InputWrapper } from "./styled";
 import Input from "../components/Input";
 import Button from "../components/Button";
 import SelectInfo from "../components/SelectInfo";
+import { useNavigate } from "react-router-dom";
 
 const Settings = () => {
   const [enteredGender, setEnteredGender] = useState(null);
@@ -13,37 +14,15 @@ const Settings = () => {
   const [enteredWeight, setEnteredWeight] = useState(null);
   const [enteredHeight, setEnteredHeight] = useState(null);
   const [enteredLevel, setEnteredLevel] = useState(null);
-  const [formIsValid, setFormIsValid] = useState(null);
+  const [formIsValid, setFormIsValid] = useState(false);
 
-  let genderRef = useRef();
+  const genderRef = useRef();
   const ageRef = useRef();
   const weightRef = useRef();
   const heightRef = useRef();
-  let levelRef = useRef();
+  const levelRef = useRef();
 
-  const submitHandler = (event) => {
-    event.preventDefault();
-
-    genderRef.current.value === "null"
-      ? setEnteredGender(false)
-      : setEnteredGender(true);
-
-    ageRef.current.value.length === 0
-      ? setEnteredAge(false)
-      : setEnteredAge(true);
-
-    weightRef.current.value.length === 0
-      ? setEnteredWeight(false)
-      : setEnteredWeight(true);
-
-    heightRef.current.value.length === 0
-      ? setEnteredHeight(false)
-      : setEnteredHeight(true);
-
-    levelRef.current.value === "null"
-      ? setEnteredLevel(false)
-      : setEnteredLevel(true);
-  };
+  const navigate = useNavigate();
 
   const changeAgeHandler = () => {
     if (ageRef.current.value.length === 0) {
@@ -78,6 +57,45 @@ const Settings = () => {
       setEnteredLevel(false);
     }
     setEnteredLevel(true);
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    genderRef.current.value === "null"
+      ? setEnteredGender(false)
+      : setEnteredGender(true);
+
+    ageRef.current.value.length === 0
+      ? setEnteredAge(false)
+      : setEnteredAge(true);
+
+    weightRef.current.value.length === 0
+      ? setEnteredWeight(false)
+      : setEnteredWeight(true);
+
+    heightRef.current.value.length === 0
+      ? setEnteredHeight(false)
+      : setEnteredHeight(true);
+
+    levelRef.current.value === "null"
+      ? setEnteredLevel(false)
+      : setEnteredLevel(true);
+
+    //submit validation
+    if (
+      enteredGender &&
+      enteredAge &&
+      enteredWeight &&
+      enteredHeight &&
+      enteredLevel
+    ) {
+      setFormIsValid(true);
+    }
+
+    if (formIsValid) {
+      navigate("/result");
+    }
   };
 
   return (
@@ -126,7 +144,7 @@ const Settings = () => {
               onChange={levelHandler}
             />
           </InputWrapper>
-          <Button nav="/result">Calcular</Button>
+          <Button>Calcular</Button>
           <Button styledBack="back" nav="/home">
             Voltar
           </Button>

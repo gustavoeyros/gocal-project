@@ -1,13 +1,14 @@
 import { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { GlobalWrapper, Form, InitialWrapper } from "./styled";
 import Button from "../components/Button";
 import Input from "../components/Input";
 import Description from "../components/Description";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [isEnteredName, setIsEnteredName] = useState(null);
   const enteredName = useRef();
+
   const navigate = useNavigate();
 
   const nameHandler = (event) => {
@@ -17,6 +18,7 @@ const Home = () => {
       return;
     }
     navigate("/settings");
+    setFormIsValid(true);
     localStorage.setItem("name", enteredName.current.value);
   };
 
