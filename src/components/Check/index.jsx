@@ -1,9 +1,9 @@
 import { CheckWrapper, InputCheck } from "./styled";
 
-const Check = () => {
+const Check = ({ onChange }) => {
   return (
     <CheckWrapper>
-      <InputCheck type="checkbox" id="saveInfo" />
+      <InputCheck onChange={onChange} type="checkbox" id="saveInfo" />
 
       <label htmlFor="saveInfo">Lembrar das minhas informações</label>
     </CheckWrapper>
