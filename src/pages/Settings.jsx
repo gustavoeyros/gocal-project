@@ -91,10 +91,14 @@ const Settings = () => {
       enteredLevel
     ) {
       setFormIsValid(true);
-    }
-
-    if (formIsValid) {
       navigate("/result");
+
+      //send data
+      localStorage.setItem("gender", genderRef.current.value);
+      localStorage.setItem("age", ageRef.current.value);
+      localStorage.setItem("weight", weightRef.current.value);
+      localStorage.setItem("height", heightRef.current.value);
+      localStorage.setItem("level", levelRef.current.value);
     }
   };
 

@@ -18,7 +18,6 @@ const Home = () => {
       return;
     }
     navigate("/settings");
-    setFormIsValid(true);
     localStorage.setItem("name", enteredName.current.value);
   };
 
