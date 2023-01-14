@@ -1,11 +1,11 @@
 import { useRef, useState } from "react";
-import { useNavigate } from "react-router";
 import { GlobalWrapper } from "./styled";
 import Title from "../components/Title";
 import Description from "../components/Description";
 import { Form, InputWrapper } from "./styled";
 import Input from "../components/Input";
 import Button from "../components/Button";
+import SelectInfo from "../components/SelectInfo";
 const Settings = () => {
   const [enteredGender, setEnteredGender] = useState(false);
   const [enteredAge, setEnteredAge] = useState(false);
@@ -33,11 +33,12 @@ const Settings = () => {
         <Description>Vamos calcular o seu gasto energético basal!</Description>
         <Form onSubmit={submitHandler}>
           <InputWrapper>
-            <Input
+            <SelectInfo
               placeholder="Seu sexo"
-              type="select"
               enteredRef={genderRef}
+              about={"gender"}
             />
+
             <Input placeholder="Sua idade" type="number" enteredRef={ageRef} />
             <Input
               placeholder="Seu peso"
@@ -49,10 +50,10 @@ const Settings = () => {
               type="number"
               enteredRef={heightRef}
             />
-            <Input
+            <SelectInfo
               placeholder="Seu nível de atividade física"
-              type="select"
               enteredRef={levelRef}
+              about={"level"}
             />
           </InputWrapper>
           <Button nav="/result">Calcular</Button>

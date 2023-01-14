@@ -1,4 +1,4 @@
-import { InputStyle, Select } from "./styled";
+import { InputStyle } from "./styled";
 const Input = ({ placeholder, type, enteredRef, hasError, onChange }) => {
   return (
     <>
@@ -10,30 +10,6 @@ const Input = ({ placeholder, type, enteredRef, hasError, onChange }) => {
           hasError={hasError}
           onChange={onChange}
         />
-      )}
-      {type === "select" && (
-        <Select type={type}>
-          {type === "first" && (
-            <>
-              <option value="none" selected disabled hidden>
-                Seu sexo
-              </option>
-              <option value="masculine">Masculino</option>
-              <option value="feminine">Feminino</option>
-            </>
-          )}
-          {type === "last" && (
-            <>
-              <option value="none" selected disabled hidden>
-                Seu nível de atividade física
-              </option>
-              <option value="1">Muito ativo</option>
-              <option value="2">Ativo</option>
-              <option value="3">Irregularmente ativo</option>
-              <option value="4">Sedentário</option>
-            </>
-          )}
-        </Select>
       )}
     </>
   );
