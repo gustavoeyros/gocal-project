@@ -1,5 +1,5 @@
 import { InputStyle, Select } from "./styled";
-const Input = ({ placeholder, type, enteredRef, hasError }) => {
+const Input = ({ placeholder, type, enteredRef, hasError, onChange }) => {
   return (
     <>
       {type !== "select" && (
@@ -8,6 +8,7 @@ const Input = ({ placeholder, type, enteredRef, hasError }) => {
           type={type}
           placeholder={placeholder}
           hasError={hasError}
+          onChange={onChange}
         />
       )}
       {type === "select" && (

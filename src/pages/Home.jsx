@@ -12,14 +12,20 @@ const Home = () => {
 
   const nameHandler = (event) => {
     event.preventDefault();
-
     if (enteredName.current.value.length === 0) {
       setIsEnteredName(false);
       return;
     }
     navigate("/settings");
-    setIsEnteredName(true);
     localStorage.setItem("name", enteredName.current.value);
+  };
+
+  const changeNameHandler = () => {
+    if (enteredName.current.value.length === 0) {
+      setIsEnteredName(false);
+      return;
+    }
+    setIsEnteredName(true);
   };
 
   return (
@@ -33,6 +39,7 @@ const Home = () => {
             placeholder="Digite o seu nome"
             enteredRef={enteredName}
             hasError={isEnteredName}
+            onChange={changeNameHandler}
           />
         </InitialWrapper>
         <Button>Avançar</Button>
