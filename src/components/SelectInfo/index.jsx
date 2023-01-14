@@ -1,21 +1,25 @@
 import { Select } from "./styled";
 
-const SelectInfo = ({ about }) => {
+const SelectInfo = ({ about, enteredRef, hasError, onChange }) => {
   return (
     <>
       {about === "gender" && (
-        <Select>
-          <option value="none" selected disabled hidden>
+        <Select ref={enteredRef} hasError={hasError} onChange={onChange}>
+          <option value="null" id="null" selected disabled hidden>
             Seu sexo
           </option>
-          <option value="masculine">Masculino</option>
-          <option value="feminine">Feminino</option>
+          <option value="masculine" id="masculine">
+            Masculino
+          </option>
+          <option value="feminine" id="feminine">
+            Feminino
+          </option>
         </Select>
       )}
 
       {about === "level" && (
-        <Select>
-          <option value="none" selected disabled hidden>
+        <Select ref={enteredRef} hasError={hasError} onChange={onChange}>
+          <option value="null" id="null" selected disabled hidden>
             Seu nível de atividade física
           </option>
           <option value="1">Muito ativo</option>

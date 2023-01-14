@@ -9,6 +9,7 @@ const Input = ({ placeholder, type, enteredRef, hasError, onChange }) => {
           placeholder={placeholder}
           hasError={hasError}
           onChange={onChange}
+          step="any"
         />
       )}
     </>
