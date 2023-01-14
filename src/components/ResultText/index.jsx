@@ -1,9 +1,9 @@
 import { ResultStyled } from "./styled";
 
-const ResultText = ({ children, position }) => {
+const ResultText = ({ children }) => {
   return (
     <>
-      <ResultStyled position={position}>{children}</ResultStyled>
+      <ResultStyled>{children}</ResultStyled>
     </>
   );
 };

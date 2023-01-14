@@ -13,15 +13,8 @@ export const InputStyle = styled.input`
   &::placeholder {
     color: #969cb3;
   }
-  ${(props) =>
-    props.position === "first" ? "margin-top: 20px;" : "margin-top: 10px;"}
 
-  ${(props) => (props.position === "last" ? "margin-bottom: 20px;" : "")}
-
-  ${(props) =>
-    props.position === "unique" ? "margin-bottom: 10px; margin-top:20px;" : ""}
-
-    ${(props) => (props.hasError === false ? "border: 1px solid red" : "")}
+  ${(props) => (props.hasError === false ? "border: 1px solid red" : "")}
 `;
 
 export const Select = styled.select`
@@ -34,9 +27,4 @@ export const Select = styled.select`
   height: 56px;
   border-radius: 8px;
   padding: 20px;
-
-  ${(props) =>
-    props.position === "first" ? "margin-top: 20px;" : "margin-top: 10px;"}
-
-  ${(props) => (props.position === "last" ? "margin-bottom: 20px;" : "")}
 `;

@@ -1,26 +1,25 @@
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { GlobalWrapper, Form } from "./styled";
+import { GlobalWrapper, Form, InitialWrapper } from "./styled";
 import Button from "../components/Button";
 import Input from "../components/Input";
 import Description from "../components/Description";
 
 const Home = () => {
-  const [isEnteredName, setIsEnteredName] = useState("");
+  const [isEnteredName, setIsEnteredName] = useState(null);
   const enteredName = useRef();
   const navigate = useNavigate();
-
-  const regEx = new RegExp("[a-zA-Z0-9]");
 
   const nameHandler = (event) => {
     event.preventDefault();
 
-    if (enteredName.current.value.length === 0 || regEx.test(enteredName)) {
+    if (enteredName.current.value.length === 0) {
       setIsEnteredName(false);
       return;
     }
     navigate("/settings");
     setIsEnteredName(true);
+    localStorage.setItem("name", enteredName.current.value);
   };
 
   return (
@@ -29,12 +28,13 @@ const Home = () => {
         <Description position="first">
           <p>Para começar</p> como podemos te chamar?
         </Description>
-        <Input
-          position="unique"
-          placeholder="Digite o seu nome"
-          enteredRef={enteredName}
-          hasError={isEnteredName}
-        />
+        <InitialWrapper>
+          <Input
+            placeholder="Digite o seu nome"
+            enteredRef={enteredName}
+            hasError={isEnteredName}
+          />
+        </InitialWrapper>
         <Button>Avançar</Button>
       </Form>
     </GlobalWrapper>

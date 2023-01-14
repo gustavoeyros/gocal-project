@@ -23,3 +23,24 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
 `;
+
+export const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+`;
+
+export const InitialWrapper = styled.div`
+  margin-top: 20px;
+  margin-bottom: 10px;
+`;
+
+export const ResultWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 138px;
+`;
