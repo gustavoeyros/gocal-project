@@ -22,10 +22,10 @@ const SelectInfo = ({ about, enteredRef, hasError, onChange }) => {
           <option value="null" id="null" selected disabled hidden>
             Seu nível de atividade física
           </option>
-          <option value="1">Muito ativo</option>
-          <option value="2">Ativo</option>
-          <option value="3">Irregularmente ativo</option>
-          <option value="4">Sedentário</option>
+          <option value="1.725">Muito ativo</option>
+          <option value="1.55">Ativo</option>
+          <option value="1.375">Irregularmente ativo</option>
+          <option value="1.2">Sedentário</option>
         </Select>
       )}
     </>
