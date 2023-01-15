@@ -9,7 +9,7 @@ const Welcome = () => {
   useEffect(() => {
     setTimeout(() => {
       navigate("/home");
-    }, 2000);
+    }, 4000);
   }, []);
   return (
     <Wrapper>
