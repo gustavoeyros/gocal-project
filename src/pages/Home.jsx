@@ -1,9 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
 import { GlobalWrapper, Form, InitialWrapper } from "./styled";
 import Button from "../components/Button";
 import Input from "../components/Input";
 import Description from "../components/Description";
-import { useNavigate } from "react-router-dom";
+import History from "../components/History";
 
 const Home = () => {
   const [isEnteredName, setIsEnteredName] = useState(null);
@@ -45,6 +46,7 @@ const Home = () => {
         </InitialWrapper>
         <Button>Avançar</Button>
       </Form>
+      <History />
     </GlobalWrapper>
   );
 };
