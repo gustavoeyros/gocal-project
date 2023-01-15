@@ -10,7 +10,10 @@ export const CardInfoWrapper = styled.div`
   & div {
     width: 50%;
   }
-
+  & p a {
+    text-decoration: none;
+    color: #37b874;
+  }
   @media (min-width: 767px) {
     width: 100%;
   }

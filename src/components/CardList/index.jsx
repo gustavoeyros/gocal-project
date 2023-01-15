@@ -6,6 +6,7 @@ const CardList = ({ infoDisplay }) => {
       {infoDisplay.map((info) => (
         <Card
           key={info.id}
+          userId={info.id}
           userName={info.name}
           userHeight={info.height}
           userWeight={info.weight}

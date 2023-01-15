@@ -1,5 +1,8 @@
+import arrowHistory from "../../assets/arrowHistory.svg";
+import { Link } from "react-router-dom";
 import { CardInfoWrapper, TitleInfoWrapper, SubInfoWrapper } from "./styled";
-const Card = ({ userName, userHeight, userWeight, userAge }) => {
+const Card = ({ userName, userHeight, userWeight, userAge, userId }) => {
+  const xd = "xd";
   return (
     <CardInfoWrapper>
       <TitleInfoWrapper>
@@ -11,7 +14,11 @@ const Card = ({ userName, userHeight, userWeight, userAge }) => {
       </TitleInfoWrapper>
       <SubInfoWrapper>
         <span>{userAge} anos</span>
-        <p>Veja o resultado </p>
+        <p>
+          <Link to={`/result/${userId}`}>
+            Veja o resultado <img src={arrowHistory} />
+          </Link>
+        </p>
       </SubInfoWrapper>
     </CardInfoWrapper>
   );
