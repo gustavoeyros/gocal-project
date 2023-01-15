@@ -1,4 +1,4 @@
-# goCal - Aplicativo de controle de consumo de caloria
+# goCal - Aplicativo de controle de consumo de calorias
 
 ## Como preparar o ambiente?
 
@@ -26,7 +26,10 @@ VITE_FIREBASE_URL=LinkDaURLDoFirebase
 
 <br>
 
-# Conhecendo o aplicativo
+# Conhecendo o aplicativo!
+
+<img src="https://user-images.githubusercontent.com/90118610/212553694-54ff29bf-607d-437e-81f0-f21c19509d59.gif">
+
 
 # Tecnologias
 
