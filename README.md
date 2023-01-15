@@ -30,6 +30,7 @@ VITE_FIREBASE_URL=LinkDaURLDoFirebase
 
 <img src="https://user-images.githubusercontent.com/90118610/212553694-54ff29bf-607d-437e-81f0-f21c19509d59.gif">
 
+Design: [Figma](https://www.figma.com/file/wWj3YKxq46gAYcCNsjp3ay/goCal-(Community)?node-id=0%3A1&t=WPArVaSQZ20KVbnV-0)
 
 # Tecnologias
 
