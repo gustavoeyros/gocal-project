@@ -6,7 +6,6 @@ export const GlobalWrapper = styled.div`
   height: 100vh;
   flex-direction: column;
   background: #f3f3f3;
-
   padding: 70px 20px 0;
 
   @media (min-width: 767px) {
@@ -14,7 +13,7 @@ export const GlobalWrapper = styled.div`
     align-items: center;
 
     & div {
-      width: 275px;
+      width: 225px;
     }
   }
 `;

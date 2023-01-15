@@ -6,6 +6,7 @@ export const CardInfoWrapper = styled.div`
   padding: 12px;
   height: 70px;
   border-radius: 5px;
+  width: 335px;
   & div {
     width: 50%;
   }
@@ -19,6 +20,7 @@ export const TitleInfoWrapper = styled.div`
   & div {
     color: #969cb2;
     width: 100%;
+    font-size: 12px;
   }
   & div span {
     padding: 8px 0px;
