@@ -7,15 +7,8 @@ export const GlobalWrapper = styled.div`
   flex-direction: column;
   background: #f3f3f3;
   padding: 70px 20px 0;
-
-  @media (min-width: 767px) {
-    justify-content: center;
-    align-items: center;
-
-    & div {
-      width: 225px;
-    }
-  }
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Form = styled.form`

@@ -4,12 +4,11 @@ import { HistoryWrapper, TitleWrapper } from "./styled";
 const History = () => {
   const [history, setHistory] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
+  const loadedHistory = [];
   const showHistory = async () => {
     const response = await fetch(import.meta.env.VITE_FIREBASE_URL);
     const data = await response.json();
 
-    const loadedHistory = [];
     for (const key in data) {
       loadedHistory.push({
         id: key,
@@ -32,6 +31,7 @@ const History = () => {
       <TitleWrapper>
         <span>Seu</span> <span>histórico</span>
       </TitleWrapper>
+
       {isLoading && <p>Loading...</p>}
       {!isLoading && <CardList infoDisplay={history} />}
     </HistoryWrapper>

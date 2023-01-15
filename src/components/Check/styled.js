@@ -6,7 +6,7 @@ export const CheckWrapper = styled.div`
   gap: 5px;
   font-weight: 700;
   margin-bottom: 21px;
-
+  width: 335px;
   & input {
     display: none;
   }

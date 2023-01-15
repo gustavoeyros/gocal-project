@@ -6,8 +6,7 @@ import ResultText from "../components/ResultText";
 import Button from "../components/Button";
 import Check from "../components/Check";
 
-const Result = () => {
-  const navigate = useNavigate();
+const ResultDetail = () => {
   const [isChecked, setIsChecked] = useState(false);
   const name = localStorage.getItem("name");
   const gender = localStorage.getItem("gender");
@@ -99,4 +98,4 @@ const Result = () => {
   );
 };
 
-export default Result;
+export default ResultDetail;

@@ -10,6 +10,10 @@ export const CardInfoWrapper = styled.div`
   & div {
     width: 50%;
   }
+
+  @media (min-width: 767px) {
+    width: 100%;
+  }
 `;
 
 export const TitleInfoWrapper = styled.div`

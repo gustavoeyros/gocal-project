@@ -5,6 +5,7 @@ const CardList = ({ infoDisplay }) => {
     <CardWrapper>
       {infoDisplay.map((info) => (
         <Card
+          key={info.id}
           userName={info.name}
           userHeight={info.height}
           userWeight={info.weight}
