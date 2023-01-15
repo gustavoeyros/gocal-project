@@ -2,7 +2,6 @@ import arrowHistory from "../../assets/arrowHistory.svg";
 import { Link } from "react-router-dom";
 import { CardInfoWrapper, TitleInfoWrapper, SubInfoWrapper } from "./styled";
 const Card = ({ userName, userHeight, userWeight, userAge, userId }) => {
-  const xd = "xd";
   return (
     <CardInfoWrapper>
       <TitleInfoWrapper>

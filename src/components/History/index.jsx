@@ -1,3 +1,4 @@
+import SkeletonLoading from "../SkeletonLoading";
 import CardList from "../CardList";
 import { useState, useEffect } from "react";
 import { HistoryWrapper, TitleWrapper } from "./styled";
@@ -20,7 +21,9 @@ const History = () => {
       });
     }
     setHistory(loadedHistory);
-    setIsLoading(false);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
   };
 
   useEffect(() => {
@@ -32,7 +35,7 @@ const History = () => {
         <span>Seu</span> <span>histórico</span>
       </TitleWrapper>
 
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <SkeletonLoading />}
       {!isLoading && <CardList infoDisplay={history} />}
     </HistoryWrapper>
   );
