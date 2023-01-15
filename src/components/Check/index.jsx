@@ -5,7 +5,8 @@ const Check = ({ onChange }) => {
     <CheckWrapper>
       <InputCheck onChange={onChange} type="checkbox" id="saveInfo" />
 
-      <label htmlFor="saveInfo">Lembrar das minhas informações</label>
+      <label htmlFor="saveInfo"></label>
+      <span>Lembrar das minhas informações</span>
     </CheckWrapper>
   );
 };
