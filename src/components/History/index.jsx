@@ -23,7 +23,7 @@ const History = () => {
     setHistory(loadedHistory);
     setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 100);
   };
 
   useEffect(() => {

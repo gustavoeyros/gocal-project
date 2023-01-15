@@ -72,13 +72,13 @@ const Result = () => {
           <p>
             Seu <b>metabolismo basal</b> é de:
           </p>
-          {resultMetabolism} calorias.
+          {resultMetabolism.toFixed(2)} calorias.
         </ResultText>
         <ResultText>
           <p>
             Para <b>manter o seu peso </b>você precisa consumir em média:
           </p>
-          {resultMetabolism} calorias.
+          {resultMetabolism.toFixed(2)} calorias.
         </ResultText>
         <ResultText>
           <p>

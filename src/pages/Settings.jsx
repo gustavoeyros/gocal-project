@@ -14,7 +14,6 @@ const Settings = () => {
   const [enteredWeight, setEnteredWeight] = useState(null);
   const [enteredHeight, setEnteredHeight] = useState(null);
   const [enteredLevel, setEnteredLevel] = useState(null);
-  const [formIsValid, setFormIsValid] = useState(false);
 
   const genderRef = useRef();
   const ageRef = useRef();
@@ -90,7 +89,6 @@ const Settings = () => {
       enteredHeight &&
       enteredLevel
     ) {
-      setFormIsValid(true);
       navigate("/result");
 
       //send data
@@ -100,6 +98,10 @@ const Settings = () => {
       localStorage.setItem("height", heightRef.current.value);
       localStorage.setItem("level", levelRef.current.value);
     }
+  };
+
+  const backToHome = () => {
+    navigate("/home");
   };
 
   return (
@@ -149,7 +151,7 @@ const Settings = () => {
             />
           </InputWrapper>
           <Button>Calcular</Button>
-          <Button styledBack="back" nav="/home">
+          <Button styledBack="back" onClick={backToHome}>
             Voltar
           </Button>
         </Form>

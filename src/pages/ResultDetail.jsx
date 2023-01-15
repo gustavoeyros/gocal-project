@@ -5,6 +5,7 @@ import { GlobalWrapper, ResultWrapper } from "./styled";
 import Title from "../components/Title";
 import ResultText from "../components/ResultText";
 import Button from "../components/Button";
+import ResultDetailLoading from "../components/SkeletonLoading/ResultDetailLoading";
 
 const ResultDetail = () => {
   const [loadedHistory, setLoadedHistory] = useState([]);
@@ -101,7 +102,7 @@ const ResultDetail = () => {
           <Button onClick={backToHome}>Voltar</Button>
         </>
       )}
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <ResultDetailLoading />}
     </GlobalWrapper>
   );
 };
